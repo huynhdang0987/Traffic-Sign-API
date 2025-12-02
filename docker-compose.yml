@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  backend:
+    image: khoahackld/traffic-backend:v1
+    container_name: traffic-backend
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  frontend:
+    image: khoahackld/traffic-frontend:v1
+    container_name: traffic-frontend
+    ports:
+      - "8080:80"
+    restart: unless-stopped
